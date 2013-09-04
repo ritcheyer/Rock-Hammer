@@ -22,6 +22,7 @@
 //		=tables							Tables
 //		=tooltip						Tooltip
 //		=wells							Wells
+//		=popovers 						Popovers
 
 
 
@@ -50,9 +51,9 @@ $baselineheight 				: 1.5em;
 
 
 // Now set media types and features for your CSS3 media queries
-
-$media : screen;  
-$feature : min-width; 
+// THIS IS NOW DEPRECATED, AS MEDIA QUERIES ARE DEFINED USING THE NEW
+// MEDIA-QUERY-BP MIXIN AND ARE DEFINED WITH THE SELECTORS TO WHICH 
+// THEY ARE NEEDED
 
 // Now set values for your responsive design breakpoints
 // Ems are default, but you may use px if you prefer
@@ -73,6 +74,11 @@ $bp6 							: 86.375em;
 // Does your design needs a maximum width to maintain readable line lengths? 
 
 $maxwidth						: 90em;
+
+// What is the class name that the media query mixin should use to target 
+// browsers not supporting media queries?
+
+$no-mq-classname 				: ".lt-ie9";
 
 
 
@@ -96,6 +102,9 @@ $baseheadingfontcolor 			: inherit;
 // Often you’ll use an alternative typeface (eg: for buttons, form inputs and tables)
 $altfontfamily 					: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $altlineheight 					: 1.35em;
+
+// You can choose a special typeface just for ampersands too
+$ampfontfamily 					: local('Georgia'), local('Garamond'), local('Palatino'), local('Book Antiqua');
 
 //  And if your site’s for geeks, you’ll need a font for code too
 $codefont 						: Monaco, Courier New, monospace;
@@ -202,7 +211,7 @@ $navigationbackgroundcolor 		: $tertiarycolor;
 $navigationborderwidth			: $borderwidth;
 
 // Set navigation items’ bottom border style
-$navigationborderstyle			: navigationborderstyle;
+$navigationborderstyle			: $borderstyle;
 
 // Set navigation items’ bottom border colour
 $navigationbordercolor 			: darken($navigationbackgroundcolor,10%);
@@ -413,7 +422,7 @@ $alertpadding					: 8px 35px 8px 14px;
 // Alerts have a default flat background colour
 // Add an optional gradient in _bootstrap-alerts.scss
 // Configure the gradient colours in _texture.scss
-$alertbackgroundcolor 			: rgb(245,239,191);
+$alertbackgroundcolor 			: $alertcolor;
 
 // Set the alert’s border width
 $alertborderwidth 				: $borderwidth * 2;
@@ -676,14 +685,17 @@ $transitionduration				: .25s;
 
 // =tooltip ============
 
-// Set tooltip font size
-$tooltipfontsize				: 11px;
+// Set tooltip background colour
+$tooltipbackgroundcolor			: $primarycolor;
+
+// Set tooltip font family
+$tooltipfontfamily				: $altfontfamily;
 
 // Set tooltip font color
 $tooltipcolor					: $white;
 
-// Set tooltip background colour
-$tooltipbackgroundcolor			: $secondarycolor;
+// Set tooltip font size
+$tooltipfontsize				: 11;
 
 // Set tooltip’s border radius. Default is $borderradius defined above
 $tooltipborderradius 			: $borderradius;
@@ -693,3 +705,44 @@ $tooltiparrowwidth				: 5px;
 
 // Set tooltip arrow colour
 $tooltiparrowcolor				: $tooltipbackgroundcolor;
+
+
+
+
+// =popovers ==========
+
+// Set background color for popover body
+$popoverbackgroundcolor 		: $primarycolor;
+
+// Set background color for popover title
+$popovertitlebackground 		: $popoverbackgroundcolor;
+
+// Set popover font family
+$popoverfontfamily				: $altfontfamily;
+
+// Set popover font color
+$popovercolor					: $white;
+
+// Set popover border-width. Default is twice $borderwidth defined above
+$popoverborderwidth				: $borderwidth * 2;
+
+// Set popover border colour
+$popoverbordercolor 			: darken($popoverbackgroundcolor,5%);
+
+// Set popover border style, Default is $borderstyle defined above
+$popoverborderstyle				: $borderstyle;
+
+// Set popover border radius. Default is $borderradius defined above
+$popoverborderradius			: $borderradius;
+
+// Set the outer width of the popover arrow
+$popoverarrowouterwidth 		: $gutterwidth / 2;
+
+// Set the actual width of the popover arrow
+$popoverarrowwidth 				: $gutterwidth / 2;
+
+// Set the outer color of the popover arrow
+$popoverarrowoutercolor 		: $popoverbordercolor;
+
+// Set the color of the popover arrow
+$popoverarrowcolor  			: $popoverbackgroundcolor;

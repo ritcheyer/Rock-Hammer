@@ -18,37 +18,37 @@ color : $lightneutralcolor; }
 
 h1,
 .h1 {
-margin-bottom : $baselineheight / 2;
 @include font-size($basefontsize * 2);
-line-height : 1.2; }
+line-height: 1.2;
+margin-bottom: $baselineheight / 2; }
 
 h2,
 .h2 {
-margin-bottom : $baselineheight / 2;
 @include font-size($basefontsize * 1.5);
-line-height : 1.2; }
+line-height: 1.2;
+margin-bottom: $baselineheight / 2; }
 
 h3,
 .h3 {
-margin-bottom : $baselineheight / 1.5;
 @include font-size($basefontsize * 1.3);
-line-height : 1.3; }
+line-height: 1.3;
+margin-bottom: $baselineheight / 1.5; }
 
 h4,
 .h4 {
-margin-bottom : $baselineheight;
 @include font-size($basefontsize * 1.25);
-line-height : 1.25; }
+line-height: 1.25;
+margin-bottom: $baselineheight; }
 
 h5,
 .h5 {
-margin-bottom : $baselineheight;
-@include font-size($basefontsize * 1.15); }
+@include font-size($basefontsize * 1.15); 
+margin-bottom: $baselineheight;}
 
 h6,
 .h6 {
-margin-bottom : $baselineheight;
 @include font-size($basefontsize);
+margin-bottom: $baselineheight;
 font-weight : normal;
 letter-spacing : 1px;
 text-transform : uppercase; }
@@ -207,6 +207,19 @@ bottom : -.25em; }
 
 .tertiary {
 @include font-size($basefontsize / 1.25); }
+
+.amp {
+font-family : $ampfontfamily; }
+
+.footnotes {
+
+li {
+margin-bottom : $baselineheight / 2;
+font-family : $altfontfamily;
+@include font-size($basefontsize / 1.3);
+line-height : 1.4; }
+
+}/*footnotes*/
 
 .spaced {
 letter-spacing : 1px; }

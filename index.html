@@ -11,13 +11,15 @@
 <!-- For all browsers -->
 <!-- @stylesheet rock-hammer -->
 
+<!-- JavaScript -->
+<!-- @javascript head.load.min -->
+<!-- @javascript modernizr-2.6.2-min -->
+<!-- @javascript jquery-1.8.3-min.js -->
+
 <!--[if (lt IE 9) & (!IEMobile)]>
 <!-- @javascript selectivizr-min -->
 <!-- @stylesheet lte-ie8 -->
 <![endif]-->
-
-<!-- JavaScript -->
-<!-- @javascript modernizr-2.6.2-min -->
 
 <!-- @include _head-icons.html -->
 <!-- @include _head-ios.html -->
@@ -363,6 +365,22 @@
 
 <div class="l-wrap">
 <div class="l-summary">
+<h3>Footnotes</h3>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<ol class="footnotes">
+<li>Footnote ordered list item <sup><a href="" title="Back">&#8593;</a></sup></li>
+<li>Footnote ordered list item <sup><a href="" title="Back">&#8593;</a></sup></li>
+<li>Footnote ordered list item <sup><a href="" title="Back">&#8593;</a></sup></li>
+</ol>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
 <h3>Definition list</h3>
 
 <p>A definition list <code>&#8249;dl&#8250;</code> consists of pairs of definition terms <code>&#8249;dt&#8250;</code> and definition descriptions <code>&#8249;dd&#8250;</code>.</p>
@@ -370,7 +388,7 @@
 
 <div class="l-content">
 <dl>
-<dt>Rock Hammer</dt>
+<dt><!-- $title --></dt>
 <dd><!-- $example-short --></dd>
 </dl>
 </div><!-- l-content -->
@@ -386,7 +404,7 @@
 
 <div class="l-content">
 <dl class="dl-horizontal">
-<dt>Rock Hammer</dt>
+<dt><!-- $title --></dt>
 <dd><!-- $example-short --></dd>
 </dl>
 </div><!-- l-content -->
@@ -576,6 +594,19 @@
 
 <div class="l-wrap">
 <div class="l-summary">
+<h3>Responsive Breadcrumbs</h3>
+<p>Responsive breadcrumbs are marked up using containing <code>&#8249;div&#8250;</code> tags with a <code>crumbs-container</code> class and <code>&#8249;ul&#8250;</code> child tags with an additional <code>crumbs</code> class.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- @include _navigation-responsive-breadcrumb.html -->
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
 <h3>Pill shaped navigation</h3>
 <p>Pills are marked up using <code>&#8249;ul&#8250;</code> tags with additional <code>nav</code> and <code>nav-pills</code> classes.</p>
 </div><!-- l-summary -->
@@ -754,7 +785,9 @@
 </div><!-- l-summary -->
 
 <div class="l-content">
-<!-- @include _bootstrap-wells.html -->
+<div class="well">
+<p><!-- $example-short --></p>
+</div>
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
@@ -767,7 +800,7 @@
 
 <div class="l-content">
 <div class="well well--large">
-<p>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.</p>
+<p><!-- $example-short --></p>
 </div>
 
 </div><!-- l-content -->
@@ -782,7 +815,7 @@
 
 <div class="l-content">
 <div class="well well--small">
-<p>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.</p>
+<p><!-- $example-short --></p>
 </div>
 
 </div><!-- l-content -->
@@ -1281,6 +1314,69 @@ Radio option</label></p>
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Responsive table</h3>
+<!-- http://filamentgroup.com/examples/rwd-table-patterns/ -->
+<p>Make a table responsive by adding a <code>rwd-table</code> class to it. <code>essential</code>, and <code>optional</code> classese may be added to the <code>th</code> elements to denote them always being visible, and what can be displayed optionally depending on screen 
+width. This requires JavaScript to function properly.</p>
+<p>Additional <code>table-condensed</code>, <code>table-bordered</code> and <code>table-striped</code> classes may be combined, 
+as before.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+
+<div class="table-wrapper">
+<table class="table table-bordered table-striped rwd-table">
+
+<thead>
+<tr>
+<th scope="col" class="essential">Header 1</th>
+<th class="optional">Header 2</th>
+<th class="essential">Header 3</th>
+<th>Header 4</th>
+<th>Header 5</th>
+<th class="optional">Header 6</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<th scope="row"><span class="row-name">Data</span></th>
+<td>Data</td>
+<td>Data</td>
+<td>Data</td>
+<td>Data</td>
+<td>Data</td>
+</tr>
+
+<tr>
+<th scope="row"><span class="row-name">Data</span></th>
+<td>Data</td>
+<td>Data</td>
+<td>Data</td>
+<td>Data</td>
+<td>Data</td>
+</tr>
+
+<tr>
+<th scope="row"><span class="row-name">Data</span></th>
+<td>Data</td>
+<td>Data</td>
+<td>Data</td>
+<td>Data</td>
+<td>Data</td>
+</tr>
+</tbody>
+
+</table>
+</div>
+
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
 </div><!-- hidden -->
 
 </section><!-- section -->
@@ -1326,6 +1422,44 @@ Radio option</label></p>
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h2>Modal</h2>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- @include _bootstrap-modal.html -->
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h2>Tooltips</h2>
+<p>Tooltips need to activated in JavaScript in order to work. See main.js for an example.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- @include _bootstrap-tooltip.html -->
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h2>Popover</h2>
+<p>Popovers need to activated in JavaScript in order to work. See main.js for an example. Popovers also require bootstrap-tooltip.js to be imported.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- @include _bootstrap-popover.html -->
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
 </div><!-- hidden -->
 
 </section><!-- section -->
@@ -1336,8 +1470,5 @@ Radio option</label></p>
 </div><!-- container -->
 
 <!-- @include _scripts.html -->
-
-<!-- Remove if unused --> <!-- @javascript nav-toggle -->
-<!-- Remove if unused --> <!-- @javascript left-nav-flyout -->
 </body>
 </html>

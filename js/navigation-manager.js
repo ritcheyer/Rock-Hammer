@@ -1,5 +1,10 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+
 // Navigation Manager object takes care of registering the click handlers for our nav patterns
-var NavigationManager = {
+NavigationManager = {
 	// Behaviour for the "Top" links
 	// Scroll up to the "backToTopTarget" supplied, based on the link having 
 	// "backToTopTarget" as the value of its href attribute
@@ -18,20 +23,35 @@ var NavigationManager = {
 		});
 	},
 
+	// Supress dead links
+	supressDeadLinks: function() {
+		// Supress clicks on any navigation item
+		$("#panel-navigation-hidden").click(function(e){
+			e.preventDefault();
+		});
+
+		// Supress buttons on modules
+		$("#panel-modules-hidden .btn").click(function(e){
+			e.preventDefault();
+		});
+
+		// Supress buttons on forms
+		$("#panel-forms-hidden .btn").click(function(e){
+			e.preventDefault();
+		});
+	},
+
 	// Entry point for the object
 	init: function(navElementId, backToTopTarget) {
 		$('body').addClass('js');
 		this.initialiseNavigationLinks(navElementId);
 		this.initialiseBackToTopLinks(backToTopTarget);
+		this.supressDeadLinks();
 	}
 };
 
-// ============================================================================
-
-// Entry point for our JavaScript code
+// Entry point for Nav Manager JS Code
 $(document).ready(function() {
-	// Initialise navigation patterns
+	// Initialise the navigation manager object
 	NavigationManager.init("navigation-toggle", "rock-hammer");
-	// Initialise the carousel
-	$('.carousel').carousel();
 });

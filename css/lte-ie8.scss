@@ -5,17 +5,15 @@ URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
 
 */
 
-// Define the ‘atmosphere’ of your design in this config file
-@import "config";
+// Media query support required?
+$media-queries-supported : false;
 
-// Sass mixins
-@import "partials/mixins";
+// Opacity support in IE required via the proprietry ActiveX?
+$ie8-opacity-supported 	 : false;
 
-// All responsive design breakpoints
-@import "partials/bp2"; 
-@import "partials/bp3"; 
-@import "partials/bp4"; 
-@import "partials/bp5"; 
-@import "partials/bp6"; 
+// Import all SASS imports
+@import 'imports';
 
-// IE override styles
+// IE override styles can be defined here (use classes applied to 
+// the HTML element as per the conditional comments to surround 
+// your selectors and target specific IE versions, such as ".lte-ie8")
